@@ -1,3 +1,18 @@
+<script setup>
+import { ref } from 'vue'
+
+const isLangOpen = ref(false)
+const isDownloadOpen = ref(false)
+
+const toggleLang = () => {
+  isLangOpen.value = !isLangOpen.value
+}
+
+const toggleDownload = () => {
+  isDownloadOpen.value = !isDownloadOpen.value
+}
+</script>
+
 <template>
   <header class="header">
     <div class="header__container">
@@ -13,8 +28,25 @@
         </nav>
 
         <div class="header__actions">
-            <button class="header__btn">Download</button>
-            <div class="header__lang">Eng ▾</div>
+            <div class="header__download" @click="toggleDownload">
+              <button class="header__btn">Download</button>
+              <div v-if="isDownloadOpen" class="header__dropdown">
+                <div class="header__dropdown-item header__dropdown-item--download">App Store</div>
+                <div class="header__dropdown-item header__dropdown-item--download">Google Play</div>
+              </div>
+        </div>
+
+            <div class="header__lang" @click="toggleLang">
+              Eng {{ isLangOpen ? '▴' : '▾' }}
+              <div v-if="isLangOpen" class="header__dropdown">
+                <div class="header__dropdown-item">
+                  <img src="/src/assets/icons/sverige.png" alt="Sverige"> Sverige
+                </div>
+                <div class="header__dropdown-item">
+                  <img src="/src/assets/icons/english.png" alt="English"> English
+                </div>
+              </div>
+            </div>
         </div>
     </div>
   </header>
@@ -68,11 +100,40 @@
     font-size: 18px;
     line-height: 20px;
     letter-spacing: 0.1px;
+    cursor: pointer;
+  }
+
+  .header__download {
+  position: relative;
   }
 
   .header__lang {
+    position: relative;
+    cursor: pointer;
     font-weight: 400;
     font-size: 18px;
-    line-height: 28px;
+  }
+
+  .header__dropdown {
+    position: absolute;
+    top: 140%;
+    left: 0;
+    background: var(--color-white);
+    border-radius: 4px;
+    min-width: 145px;
+    min-height: 70px;
+    box-shadow: 0 6px 10px rgb(0, 0, 0, 0.1);
+  }
+
+  .header__dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 4px 6px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .header__dropdown-item--download {
+    padding: 8px 16px;
   }
   </style>
