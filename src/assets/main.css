@@ -1,0 +1,21 @@
+:root{
+   --color-primary:  #6750A4;
+   --color-dark-text: #23153E;
+   --color-light-text: #443A5A;
+   --color-divider: #FF2D55;
+   --color-white: #FFFFFF;
+}
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
