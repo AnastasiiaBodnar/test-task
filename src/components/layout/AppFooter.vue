@@ -67,11 +67,25 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 50px;
+  transition: opacity 0.2s ease;
+}
+
+.footer__nav-col a:hover {
+  opacity: 0.7;
 }
 
 .footer__social {
   display: flex;
   gap: 16px;
+}
+
+.footer__social a {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.footer__social a:hover {
+  transform: scale(1.1);
 }
 
 .footer__social img {

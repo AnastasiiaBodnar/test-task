@@ -79,6 +79,11 @@ const toggleDownload = () => {
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;
+    transition: color 0.2s ease;
+  }
+
+  .header__nav a:hover {
+    color: var(--color-primary);
   }
 
   .header__actions {
@@ -101,6 +106,11 @@ const toggleDownload = () => {
     line-height: 20px;
     letter-spacing: 0.1px;
     cursor: pointer;
+    transition: opacity 0.2s ease;
+  }
+
+  .header__btn:hover {
+    opacity: 0.9;
   }
 
   .header__download {
@@ -112,6 +122,11 @@ const toggleDownload = () => {
     cursor: pointer;
     font-weight: 400;
     font-size: 18px;
+    transition: color 0.2s ease;
+  }
+
+  .header__lang:hover {
+    color: var(--color-primary);
   }
 
   .header__dropdown {
@@ -121,8 +136,8 @@ const toggleDownload = () => {
     background: var(--color-white);
     border-radius: 4px;
     min-width: 145px;
-    min-height: 70px;
     box-shadow: 0 6px 10px rgb(0, 0, 0, 0.1);
+    overflow: hidden;
   }
 
   .header__dropdown-item {
@@ -131,6 +146,11 @@ const toggleDownload = () => {
     padding: 4px 6px;
     cursor: pointer;
     font-size: 14px;
+    transition: background-color 0.2s ease;
+  }
+
+  .header__dropdown-item:hover {
+    background-color: #f5f5f5;
   }
 
   .header__dropdown-item--download {
