@@ -1,3 +1,20 @@
+<script setup>
+const steps = [
+    {
+        title: 'Browse exercises',
+        text: 'Browse over 100 exercises with a video or picture and a description.',
+        icon: '/src/assets/icons/exercises.png',
+        alt: 'exercises'
+    },
+    {
+        title: 'Create timeline',
+        text: 'Take pictures along the way during and after the pregnancy to see the transformation.',
+        icon: '/src/assets/icons/timeline.png',
+        alt: 'timeline'
+    }
+];
+</script>
+
 <template>
     <section class="how">
         <div class="how__container">
@@ -6,19 +23,11 @@
            <div class="how__divider"></div>
 
            <div class="how__items">
-            <div class="how__item">
-                <img src="/src/assets/icons/exercises.png" alt="exercises">
+            <div v-for="(step, index) in steps" :key="index" class="how__item">
+                <img :src="step.icon" :alt="step.alt">
                 <div class="how__item-content">
-                    <div class="how__item-title">Browse exercises</div>
-                    <div class="how__item-text">Browse over 100 exercises with a video or picture and a description.</div>
-                </div>
-            </div>
-
-            <div class="how__item">
-                <img src="/src/assets/icons/timeline.png" alt="timeline">
-                <div class="how__item-content">
-                    <div class="how__item-title">Create timeline</div>
-                    <div class="how__item-text">Take pictures along the way during and after the pregnancy to see the transformation.</div>
+                    <div class="how__item-title">{{ step.title }}</div>
+                    <div class="how__item-text">{{ step.text }}</div>
                 </div>
             </div>
            </div>
