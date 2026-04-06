@@ -1,85 +1,108 @@
 <template>
-    <section class="hero">
-        <div class="hero__container">
-            <div class="hero__content">
-                <h1 class="hero__title">Strong for life with us</h1>
-                <div class="hero__divider"></div>
-                <p class="hero__text">
-                    The best Pre/postnatal fitness app! 100 exercises divided in before, during and after pregnancy. 
-                    Stay strong and healthy through all stages of pregnancy.
-                </p>
-                <div class="hero__buttons">
-                    <a href="#" class="hero__store-btn">
-                        <img src="/src/assets/icons/Apple.png" alt="App Store">
-                        <div class="hero__store-text">
-                            <span class="hero__store-label">Download on the</span>
-                            <span class="hero__store-name">App Store</span>
-                        </div>
-                    </a>
+  <section class="hero">
 
-                    <a href="#" class="hero__store-btn">
-                        <img src="/src/assets/icons/GooglePlay.png" alt="Google Play">
-                        <div class="hero__store-text">
-                            <span class="hero__store-label">GET IT ON</span>
-                            <span class="hero__store-name">Google Play</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
+    <img src="@/assets/image/bg.png" alt="Background" class="hero-bg-img" />
 
-            <div class="hero__image">
-                <img src="/src/assets/image/PhoneHero.png" alt="App screenshot">
+    <div class="hero__container"> 
+    
+      <div class="hero__content">
+        <h1 class="hero__title">
+          Strong for life <br> 
+          with us
+        </h1>
+        
+        <div class="hero__divider"></div>
+        
+        <p class="hero__subtitle">
+          The best Pre/postnatal fitness app! 100 <br>
+          exercises divided in before, during and <br>
+          after pregnancy. Stay strong and healthy <br>
+          through all stages of pregnancy.
+        </p>
+
+        <div class="hero__buttons">
+
+          <button class="hero__store-btn">
+            <img src="@/assets/icons/Apple.png" alt="Apple" />
+            <div class="hero__store-text">
+              <span class="hero__store-label">Download on the</span>
+              <span class="hero__store-name">App Store</span>
             </div>
+          </button>
+          
+          <button class="hero__store-btn">
+            <img src="@/assets/icons/GooglePlay.png" alt="Google Play" />
+            <div class="hero__store-text">
+              <span class="hero__store-label">GET IT ON</span>
+              <span class="hero__store-name">Google Play</span>
+            </div>
+          </button>
         </div>
-    </section>
+      </div>
+
+      <div class="hero__image">
+        <img src="@/assets/image/PhoneHero.png" alt="App Interface" class="phone-image" />
+      </div>
+
+    </div>
+  </section>
 </template>
+
+<script setup>
+</script>
 
 <style scoped>
 .hero {
-    padding: 40px 20px;
+  position: relative;
+  max-width: 1200px;
+  margin: 60px auto;
+  height: 620px;
+  overflow: visible;
+}
+
+.hero-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill; 
+  z-index: -1;
 }
 
 .hero__container {
-    max-width: 950px;
-    margin: 0 auto;
-    padding: 16px 28px 56px 100px;
-    background-image: url(/src/assets/image/bg.png);
-    background-size: cover;
-    background-position: center;
-    border-radius: 30px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 60px 60px 0 60px; 
 }
 
 .hero__content {
-    flex: 1;
-    max-width: 380px;
-    margin-top: 36px;
+  flex: 1;
+  margin-top: 0;
 }
 
 .hero__title {
-    font-size: 40px;
-    font-weight: 700;
-    color: var(--color-dark-text);
-    margin-bottom: 24px;
-    line-height: 1.1;
+  color: var(--color-dark-text, #23153E);
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0;
 }
 
 .hero__divider {
-    width: 40px;
-    height: 3px;
-    background-color: var(--color-divider);
-    margin-bottom: 24px;
-    border-radius: 2px;
+  width: 45px;
+  height: 3px;
+  background-color: var(--color-divider, #FF2D55);
+  margin: 20px 0 30px 0;
 }
 
-.hero__text {
-    font-size: 18px;
-    color: var(--color-light-text);
-    line-height: 1.55;
-    margin-bottom: 30px;
+.hero__subtitle {
+  color: var(--color-light-text, #443A5A);
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 35px;
+  max-width: 420px;
 }
 
 .hero__buttons {
@@ -109,6 +132,7 @@
 .hero__store-text {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 }
 
 .hero__store-label {
@@ -125,17 +149,16 @@
 }
 
 .hero__image {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-top: -80px;
 }
 
-.hero__image img {
-    max-width: 100%;
-    max-height: 480px;
-    object-fit: contain;
-    transform: scale(1.2);
-    transform-origin: top right;
+.phone-image {
+  max-width: 100%; 
+  width: 540px;
+  height: 700px;
 }
 
 </style>

@@ -56,7 +56,7 @@ const toggleDownload = () => {
   .header__container{
     max-width: 1200px;
     margin: 0 auto;
-    padding: 16px 24px;
+    padding: 20px 0px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -71,6 +71,8 @@ const toggleDownload = () => {
   .header__nav{
     display: flex;
     gap: 24px;
+    margin-left: auto;
+    margin-right: 40px;
   }
 
   .header__nav a {
@@ -131,7 +133,7 @@ const toggleDownload = () => {
 
   .header__dropdown {
     position: absolute;
-    top: 140%;
+    top: 120%;
     left: 0;
     background: var(--color-white);
     border-radius: 4px;

@@ -38,17 +38,18 @@
 .footer__container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 24px;
+  padding: 50px 0px;
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 80px;
 }
 
 .footer__logo {
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 100%;
+  font-weight: bold;
+  font-size: 35px;
   color: var(--color-white);
+  line-height: 1
 }
 
 .footer__nav {
@@ -65,8 +66,9 @@
   text-decoration: none;
   color: var(--color-white);
   font-weight: 400;
-  font-size: 24px;
-  line-height: 50px;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 20px;
   transition: opacity 0.2s ease;
 }
 
@@ -89,7 +91,7 @@
 }
 
 .footer__social img {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
 }
 </style>
