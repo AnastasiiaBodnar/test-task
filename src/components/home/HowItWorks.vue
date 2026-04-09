@@ -41,19 +41,19 @@ const steps = [
 .how__container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 30px 0;
+    padding: 70px 0;
     text-align: center;
 }
 
 .how__title {
-    font-size: 45px;
+    font-size: 48px;
     font-weight: 700;
     line-height: 100%;
     color: var(--color-dark-text);
 }
 
 .how__subtitle {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 500;
     line-height: 100%;
     color: var(--color-light-text);
@@ -62,8 +62,8 @@ const steps = [
 .how__divider {
     width: 45px;
     height: 3px;
-    background-color: var(--color-divider, #FF2D55);
-    margin: 20px auto 30px auto;
+    background-color: var(--color-divider);
+    margin: 20px auto 55px auto;
 }
 
 .how__items {
@@ -85,7 +85,7 @@ const steps = [
 }
 
 .how__item-title {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 500;
     color: #23153E;
     line-height: 1.8;
