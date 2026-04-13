@@ -106,3 +106,137 @@ const smallPosts = posts.filter(p => !p.large)
         </div>
     </section>
 </template>
+
+<style scoped>
+
+.blog {
+    padding: 30px 0 60px 0;
+}
+
+.blog__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog__header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.blog__title {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 100%;
+    color: var(--color-dark-text);
+}
+
+.blog__divider {
+    width: 45px;
+    height: 3px;
+    background-color: var(--color-divider);
+    margin: 20px auto 0px auto;
+}
+
+.blog__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 16px;
+}
+
+.blog__small-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.blog__card {
+    position: relative;
+}
+
+.blog__card--large {
+    height: 600px;
+}
+
+.blog__card--small {
+    height: 283px;
+}
+
+.blog__card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.blog__caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    color: var(--color-white);
+}
+
+.blog__card--large .blog__card-title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 100%;
+    margin: 0 0 8px 0;
+}
+
+.blog__card--small .blog__card-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 100%;
+    margin: 0 0 6px 0;
+}
+
+.blog__card-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.blog__card-avatar {
+    height: 30px;
+}
+
+.blog__card-author {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    padding-right: 20px;
+}
+
+.blog__card-date {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.blog__more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding-top: 20px;
+}
+
+.blog__more-text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 160%;
+}
+
+.blog__more-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+</style>
