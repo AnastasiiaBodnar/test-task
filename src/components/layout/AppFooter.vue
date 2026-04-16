@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="footer__container"> 
       <div class="footer__logo">
-      LOGO
+        LOGO
       </div>
 
       <nav class="footer__nav">
@@ -38,7 +38,7 @@
 .footer__container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 50px 0px;
+  padding: 50px 0;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -49,7 +49,7 @@
   font-weight: bold;
   font-size: 35px;
   color: var(--color-white);
-  line-height: 1
+  line-height: 1;
 }
 
 .footer__nav {
@@ -93,5 +93,49 @@
 .footer__social img {
   width: 28px;
   height: 28px;
+}
+
+@media (max-width: 1024px) {
+  .footer__container {
+    padding: 50px 60px;
+    gap: 40px;
+  }
+  .footer__nav {
+    gap: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 60px;
+    gap: 40px;
+  }
+  .footer__nav {
+    gap: 60px;
+  }
+  .footer__nav-col {
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer__container {
+    padding: 40px 16px;
+    gap: 30px;
+  }
+  .footer__logo {
+    font-size: 28px;
+  }
+  .footer__nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer__nav-col a {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
 }
 </style>
