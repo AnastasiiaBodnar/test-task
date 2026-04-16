@@ -95,7 +95,7 @@
   height: 28px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1260px) {
   .footer__container {
     padding: 50px 60px;
     gap: 40px;

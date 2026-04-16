@@ -229,7 +229,7 @@ const toggleMobileMenu = () => {
 }
 
 
-@media (max-width: 1024px) {
+@media (max-width: 1260px) {
   .header__container {
     padding: 20px 60px;
   }
