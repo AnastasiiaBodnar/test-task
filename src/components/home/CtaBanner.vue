@@ -54,5 +54,32 @@
     height: 58px;
     width: 392px;
 }
+
+@media (max-width: 1260px) {
+  .cta__container {
+    padding: 0 60px;
+  }
+  .cta__banner {
+    padding: 40px 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta__banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    padding: 40px 20px;
+  }
+  .cta__btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 320px) {
+
+.cta__title { font-size: 36px; }
+  
+}
 </style>
- 
