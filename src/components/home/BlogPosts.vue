@@ -152,6 +152,9 @@ const smallPosts = posts.filter(p => !p.large)
 
 .blog__card {
     position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    isolation: isolate;
 }
 
 .blog__card--large {
@@ -166,6 +169,7 @@ const smallPosts = posts.filter(p => !p.large)
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     display: block;
 }
 
@@ -238,5 +242,62 @@ const smallPosts = posts.filter(p => !p.large)
     border: none;
     font-size: 20px;
     cursor: pointer;
+}
+
+@media (max-width: 1260px) {
+  .blog__container {
+    padding: 0 60px;
+  }
+  .blog__title {
+    font-size: 42px; 
+  }
+  .blog__card--large {
+    height: 500px; 
+  }
+  .blog__card--small {
+    height: 240px; 
+  }
+  .blog__card--large .blog__card-title {
+    font-size: 28px;
+  }
+  .blog__card--small .blog__card-title {
+    font-size: 18px;
+  }
+
+  .blog__card-avatar {
+    height: 25px;
+}
+}
+
+@media (max-width: 768px) {
+  .blog__container {
+    padding: 0 24px;
+  }
+  .blog__grid, .blog__small-grid {
+    grid-template-columns: 1fr;
+  }
+  .blog__card--large,
+  .blog__card--small {
+    height: 350px;
+  }
+  .blog__card--large .blog__card-title,
+  .blog__card--small .blog__card-title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 320px) {
+  .blog__container {
+    padding: 0 16px;
+  }
+  .blog__title { font-size: 36px; }
+  .blog__card--large,
+  .blog__card--small { 
+    height: 240px; 
+  }
+  .blog__card--large .blog__card-title,
+  .blog__card--small .blog__card-title {
+    font-size: 20px;
+  }
 }
 </style>
