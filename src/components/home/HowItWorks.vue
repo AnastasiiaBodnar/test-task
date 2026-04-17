@@ -98,4 +98,33 @@ const steps = [
     color: #443A5A;
     max-width: 480px;
 }
+
+@media (max-width: 1260px) {
+    .how__container {
+        padding: 70px 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .how__items {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .how__item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .how__item-text {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 320px) {
+    .how__title { font-size: 36px; }
+    .how__subtitle { font-size: 22px; }
+    .how__item-title { font-size: 24px; }
+    .how__item-text { font-size: 14px; }
+    .how__item { gap: 10px; }
+}
 </style>
