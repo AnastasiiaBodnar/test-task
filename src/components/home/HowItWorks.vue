@@ -1,15 +1,18 @@
 <script setup>
+import exercisesImg from '@/assets/icons/exercises.png'
+import timelineImg from '@/assets/icons/timeline.png'
+
 const steps = [
     {
         title: 'Browse exercises',
         text: 'Browse over 100 exercises with a video or picture and a description.',
-        icon: '/src/assets/icons/exercises.png',
+        icon: exercisesImg,
         alt: 'exercises'
     },
     {
         title: 'Create timeline',
         text: 'Take pictures along the way during and after the pregnancy to see the transformation.',
-        icon: '/src/assets/icons/timeline.png',
+        icon: timelineImg,
         alt: 'timeline'
     }
 ];
@@ -97,5 +100,34 @@ const steps = [
     line-height: 28px;
     color: #443A5A;
     max-width: 480px;
+}
+
+@media (max-width: 1260px) {
+    .how__container {
+        padding: 70px 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .how__items {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .how__item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .how__item-text {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 320px) {
+    .how__title { font-size: 36px; }
+    .how__subtitle { font-size: 22px; }
+    .how__item-title { font-size: 24px; }
+    .how__item-text { font-size: 14px; }
+    .how__item { gap: 10px; }
 }
 </style>
