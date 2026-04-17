@@ -96,7 +96,7 @@ const toggleMobileMenu = () => {
   </header>
 </template>
 
-<style>
+<style scoped>
 .header__container {
   max-width: 1200px;
   margin: 0 auto;
