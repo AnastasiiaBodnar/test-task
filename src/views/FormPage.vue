@@ -83,4 +83,47 @@
   line-height: 28px;
   padding: 18px 30px;
 }
+
+@media (max-width: 1260px) {
+  .form__container {
+    padding: 0 60px;
+  }
+  .form__card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .form__container {
+    padding: 0 24px;
+  }
+  .form__card {
+    padding: 60px 30px;
+    background-size: cover;
+    background-position: center;
+  }
+  .form__title {
+    font-size: 42px;
+  }
+  .form__fields {
+    width: 100%;
+    align-items: center;
+  }
+  .form__input, .form__btn {
+    width: 100%;
+    max-width: 392px;
+  }
+}
+
+@media (max-width: 320px) {
+  .form__container {
+    padding: 0 16px;
+  }
+  .form__card {
+    padding: 40px 20px;
+  }
+  .form__title {
+    font-size: 34px;
+  }
+}
 </style>
