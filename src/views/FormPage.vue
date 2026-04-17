@@ -1,16 +1,31 @@
+<script setup>
+import { reactive } from 'vue'
+
+const formData = reactive({
+  firstName: '',
+  secondName: '',
+  email: '',
+  address: ''
+})
+
+const submitForm = () => {
+  console.log('Form submitted with data:', Object.assign({}, formData))
+}
+</script>
+
 <template>
   <section class="form">
     <div class="form__container">
       <div class="form__card">
         <h2 class="form__title">Send your data</h2>
 
-        <div class="form__fields">
-          <input class="form__input" type="text" placeholder="First Name">
-          <input class="form__input" type="text" placeholder="Second Name">
-          <input class="form__input" type="email" placeholder="Email">
-          <input class="form__input" type="text" placeholder="Adress">
-          <button class="form__btn">Submit</button>
-        </div>
+        <form class="form__fields" @submit.prevent="submitForm">
+          <input class="form__input" v-model="formData.firstName" type="text" placeholder="First Name" required>
+          <input class="form__input" v-model="formData.secondName" type="text" placeholder="Second Name" required>
+          <input class="form__input" v-model="formData.email" type="email" placeholder="Email" required>
+          <input class="form__input" v-model="formData.address" type="text" placeholder="Adress" required>
+          <button class="form__btn" type="submit">Submit</button>
+        </form>
       </div>
     </div>
   </section>
