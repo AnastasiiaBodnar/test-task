@@ -20,10 +20,10 @@
       </nav>
 
       <div class="footer__social">
-        <a href="#"><img src="/src/assets/icons/Facebook.png" alt="Facebook"></a>
-        <a href="#"><img src="/src/assets/icons/Instagram.png" alt="Instagram"></a>
-        <a href="#"><img src="/src/assets/icons/YouTube.png" alt="YouTube"></a>
-        <a href="#"><img src="/src/assets/icons/Pinterest.png" alt="Pinterest"></a>
+        <a href="#"><img src="@/assets/icons/Facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="@/assets/icons/Instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="@/assets/icons/YouTube.png" alt="YouTube"></a>
+        <a href="#"><img src="@/assets/icons/Pinterest.png" alt="Pinterest"></a>
       </div>
     </div>
   </footer>

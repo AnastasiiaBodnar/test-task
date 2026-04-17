@@ -52,10 +52,10 @@ const toggleMobileMenu = () => {
           Eng {{ isLangOpen ? '▴' : '▾' }}
           <div v-if="isLangOpen" class="header__dropdown">
             <div class="header__dropdown-item">
-              <img src="/src/assets/icons/sverige.png" alt="Sverige"> Sverige
+              <img src="@/assets/icons/sverige.png" alt="Sverige"> Sverige
             </div>
             <div class="header__dropdown-item">
-              <img src="/src/assets/icons/english.png" alt="English"> English
+              <img src="@/assets/icons/english.png" alt="English"> English
             </div>
           </div>
         </div>
@@ -83,10 +83,10 @@ const toggleMobileMenu = () => {
           Eng {{ isLangOpen ? '▴' : '▾' }}
           <div v-if="isLangOpen" class="header__dropdown header__dropdown--right">
             <div class="header__dropdown-item">
-              <img src="/src/assets/icons/sverige.png" alt="Sverige"> Sverige
+              <img src="@/assets/icons/sverige.png" alt="Sverige"> Sverige
             </div>
             <div class="header__dropdown-item">
-              <img src="/src/assets/icons/english.png" alt="English"> English
+              <img src="@/assets/icons/english.png" alt="English"> English
             </div>
           </div>
         </div>

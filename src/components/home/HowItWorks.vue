@@ -1,15 +1,18 @@
 <script setup>
+import exercisesImg from '@/assets/icons/exercises.png'
+import timelineImg from '@/assets/icons/timeline.png'
+
 const steps = [
     {
         title: 'Browse exercises',
         text: 'Browse over 100 exercises with a video or picture and a description.',
-        icon: '/src/assets/icons/exercises.png',
+        icon: exercisesImg,
         alt: 'exercises'
     },
     {
         title: 'Create timeline',
         text: 'Take pictures along the way during and after the pregnancy to see the transformation.',
-        icon: '/src/assets/icons/timeline.png',
+        icon: timelineImg,
         alt: 'timeline'
     }
 ];

@@ -23,7 +23,7 @@ const submitForm = () => {
           <input class="form__input" v-model="formData.firstName" type="text" placeholder="First Name" required>
           <input class="form__input" v-model="formData.secondName" type="text" placeholder="Second Name" required>
           <input class="form__input" v-model="formData.email" type="email" placeholder="Email" required>
-          <input class="form__input" v-model="formData.address" type="text" placeholder="Adress" required>
+          <input class="form__input" v-model="formData.address" type="text" placeholder="Address" required>
           <button class="form__btn" type="submit">Submit</button>
         </form>
       </div>
@@ -46,7 +46,7 @@ const submitForm = () => {
 
 .form__card {
   align-items: center;
-  background-image: url(/src/assets/image/bgForm.png);
+  background-image: url(@/assets/image/bgForm.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   border-radius: 20px;
@@ -74,7 +74,8 @@ const submitForm = () => {
 }
 
 .form__input {
-  width: 392px;
+  width: 100%;
+  max-width: 392px;
   height: 58px;
   padding: 14px 20px;
   border-radius: 100px;
@@ -83,6 +84,12 @@ const submitForm = () => {
   outline: none;
   background-color: var(--color-white);
   color: var(--color-dark-text);
+  transition: box-shadow 0.2s ease, outline 0.2s ease;
+}
+
+.form__input:focus {
+  outline: 2px solid var(--color-primary);
+  box-shadow: 0 0 8px rgba(255, 45, 85, 0.2);
 }
 
 .form__btn {
@@ -90,13 +97,24 @@ const submitForm = () => {
   border: none;
   text-align: center;
   border-radius: 100px;
-  width: 392px;
+  width: 100%;
+  max-width: 392px;
   height: 58px; 
   color: var(--color-white);
   font-size: 18px;
   font-weight: 500;
   line-height: 28px;
   padding: 18px 30px;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.form__btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+.form__btn:active {
+  transform: translateY(0);
 }
 
 @media (max-width: 1260px) {
