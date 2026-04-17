@@ -248,6 +248,10 @@ const toggleMobileMenu = () => {
     padding: 10px 16px;
     font-size: 16px;
   }
+  .header__dropdown-item {
+    padding: 4px 12px;
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 768px) {
