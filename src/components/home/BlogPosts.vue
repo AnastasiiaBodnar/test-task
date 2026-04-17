@@ -1,57 +1,16 @@
 <script setup>
-import runningImg from '@/assets/image/running.png'
-import avatarImg from '@/assets/image/avatar.png'
-import walksImg from '@/assets/image/walks.png'
-import workoutImg from '@/assets/image/workout.png'
-import fitnessImg from '@/assets/image/fitness.png'
-import therapistImg from '@/assets/image/therapist.png'
+import { computed } from 'vue'
 
-const posts = [
-    {
-        id:1,
-        title: 'Return to running after pregnancy – Is your body strong enough for running?',
-        author: 'BY TILDA LOFTIN',
-        avatar: avatarImg,
-        date: 'JUNE 25, 2021',
-        image: runningImg,
-        large: true,
-    },
+const props = defineProps({
+    posts: {
+        type: Array,
+        required: true,
+        default: () => []
+    }
+})
 
-       {
-        id: 2,
-        title: 'Stroller walks',
-        date:'APRIL 21, 2021',
-        image: walksImg,
-        large: false,
-    },
-
-    {
-        id: 3,
-        title: 'Playground workout',
-        date: 'MARCH 17, 2020',
-        image: workoutImg,
-        large: false,
-    },
-
-    {
-        id: 4,
-        title: 'Your Essential Fitness Gear for Each Trimester',
-        date: 'FEBRUARY 21, 2021',
-        image: fitnessImg,
-        large: false,
-    },
-
-    {
-        id: 5,
-        title: 'What YOU could gain by working with a Woman’s Health Physical Therapist ',
-        date: 'JANUARY 23, 2020',
-        image: therapistImg,
-        large: false,
-    },
-]
-
-const largePosts = posts.filter(p => p.large)
-const smallPosts = posts.filter(p => !p.large)
+const largePosts = computed(() => props.posts.filter(p => p.large))
+const smallPosts = computed(() => props.posts.filter(p => !p.large))
 </script>
 
 <template>
